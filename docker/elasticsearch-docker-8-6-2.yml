@@ -1,8 +1,8 @@
 version: '3'
 services:
   elasticsearch:
-    image: docker.elastic.co/elasticsearch/elasticsearch:8.6.2
-    container_name: elasticsearch-in-action-8.6.2
+    image: docker.elastic.co/elasticsearch/elasticsearch:8.18.0
+    container_name: elasticsearch-in-action-8.18.0
     environment:
       - node.name=node1
       - cluster.name=elasticsearch-in-action
@@ -22,8 +22,8 @@ services:
     networks:
       - elasticsearch-in-action
   kibana:
-    image: docker.elastic.co/kibana/kibana:8.6.2
-    container_name: kibana-in-action-8.6.2
+    image: docker.elastic.co/kibana/kibana:8.18.0
+    container_name: kibana-in-action-8.18.0
     environment:
       - elasticsearch.url=http://elasticsearch:9200
       - csp.strict=false
