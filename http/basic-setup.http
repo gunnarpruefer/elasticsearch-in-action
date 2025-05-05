@@ -1,0 +1,22 @@
+### _cat
+GET localhost:9200/_cat
+
+### allocation
+GET localhost:9200/_cat/allocation
+
+### shards
+GET http://localhost:9200/_cat/shards
+
+### nodes
+GET localhost:9200/_cat/nodes
+
+### indices
+GET localhost:9200/_cat/indices
+
+### health
+GET localhost:9200/_cat/health
+
+### health v = verbose
+GET localhost:9200/_cat/health?v
+
+###
