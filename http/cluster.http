@@ -1,0 +1,38 @@
+###
+# @name /_cluster/settings
+GET {{protocolHostAndPort}}/_cluster/settings
+content-type: application/json
+
+###
+# @name /_cluster/settings?include_defaults=true
+GET {{protocolHostAndPort}}/_cluster/settings?include_defaults=true
+content-type: application/json
+
+###
+GET {{protocolHostAndPort}}/_all/_settings?expand_wildcards=all
+
+### adding ?pretty=true seems not to make a difference
+# @name /_cluster/health
+GET {{protocolHostAndPort}}/_cluster/health
+
+###
+# https://www.elastic.co/guide/en/elasticsearch/reference/7.17/cluster-state.html
+# @name /_cluster/state/
+GET {{protocolHostAndPort}}/_cluster/state/
+
+###
+# @name /_cluster/state/_all/
+GET {{protocolHostAndPort}}/_cluster/state/_all/
+
+###
+# @name _cluster/reroute?retry_failed=true
+# https://www.elastic.co/guide/en/elasticsearch/reference/7.17/cluster-reroute.html
+POST {{protocolHostAndPort}}/_cluster/reroute?retry_failed=true
+
+###
+# https://www.elastic.co/guide/en/elasticsearch/reference/7.17/cluster-allocation-explain.html
+# @name /_cluster/allocation/explain
+GET {{protocolHostAndPort}}/_cluster/allocation/explain?pretty
+
+
+
